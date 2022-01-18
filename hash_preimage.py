@@ -16,10 +16,8 @@ def hash_preimage(target_string):
             else:
                 num_digits_hex = int(l/4)+1
             hashed_trimmed_txt = hashed_txt[-num_digits_hex:]
-            print(hashed_trimmed_txt)
             x = hex_to_bin(hashed_trimmed_txt)
             x_same_length_target = x[-l:]
-            print(x_same_length_target)
             if x_same_length_target == target_string:
                 matched = True
                 return txt
