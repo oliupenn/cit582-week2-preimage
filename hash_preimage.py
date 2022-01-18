@@ -8,7 +8,7 @@ def hash_preimage(target_string):
     else:
         matched = False
         while not matched:
-            txt = os.urandom(1)
+            txt = os.urandom(2)
             hashed_txt = hashlib.sha256(txt).hexdigest()
             l = len(target_string)
             if l % 4 == 0:
